@@ -6,6 +6,8 @@ import BlogPost from '../layouts/BlogPost.astro';
   title="About Us"
   description="Who we are and how we work"
   heroImage="/blog-placeholder-about.jpg"
+  pubDate={new Date()}              /* 👈 add this */
+  /* updatedDate={new Date()} */    /* optional */
 >
   <section class="mx-auto max-w-6xl px-6 py-16 space-y-24">
     <!-- Row 1 -->
