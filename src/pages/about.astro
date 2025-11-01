@@ -1,75 +1,71 @@
 ---
-import BlogPost from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
 ---
 
-<BlogPost
-  title="About Us"
-  description="Who we are and how we work"
->
+<html lang="en">
+  <head>
+    <BaseHead title="About Us" description="Who we are and how we work" />
+  </head>
+  <body>
+    <Header />
 
-<!-- inside your Layout/BlogPost slot -->
-<section class="about">
-  <!-- Row 1 -->
-  <div class="row">
-    <img src="/JHY .png" alt="Introducing Joseph Yim" class="photo" />
-    <div class="copy">
-      <h2>Bio</h2>
-      <p>
-        testing testing . blah blah Every story deserves to be told clearly and authentically.
-        We help students refine their ideas into personal narratives that stand out to admissions committees.
-      </p>
-    </div>
-  </div>
+    <main>
+      <section class="about">
+        <!-- Row 1 -->
+        <div class="row">
+          <img src="/JHY.png" alt="Introducing Joseph Yim" class="photo" />
+          <div class="copy">
+            <h1>About Us</h1>
+            <h2>Bio</h2>
+            <p>
+              testing testing . blah blah Every story deserves to be told clearly and authentically.
+              We help students refine their ideas into personal narratives that stand out to admissions committees.
+            </p>
+          </div>
+        </div>
 
-  <!-- Row 2 -->
-  <div class="row row-reverse">
-    <div class="copy">
-      <h2>testing 1</h2>
-      <p>
-        From brainstorming to final polish, our editors work closely with each student to
-        uncover their strongest themes and deliver essays that capture who they are.
-      </p>
-    </div>
-    <img src="/KYM.png" alt="Introducing Kristine Ma" class="photo" />
-  </div>
-</section>
+        <!-- Row 2 (flipped on desktop) -->
+        <div class="row row-reverse">
+          <div class="copy">
+            <h2>testing 1</h2>
+            <p>
+              From brainstorming to final polish, our editors work closely with each student to
+              uncover their strongest themes and deliver essays that capture who they are.
+            </p>
+          </div>
+          <img src="/KYM.png" alt="Introducing Kristine Ma" class="photo" />
+        </div>
+      </section>
+    </main>
 
-<style>
-  .about {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem;
-  }
-  .row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 4rem;
-  }
-  /* 2 columns on tablets/desktops */
-  @media (min-width: 768px) {
-    .row { grid-template-columns: 1fr 1fr; }
-    /* Flip order for the second row on wide screens */
-    .row-reverse { direction: rtl; }
-    .row-reverse > * { direction: ltr; }
-  }
-  .photo {
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0,0,0,.08);
-    display: block;
-  }
-  .copy h2 {
-    margin: 0 0 .5rem;
-    font-size: 1.6rem;
-    font-weight: 600;
-  }
-  .copy p {
-    color: #555;
-    line-height: 1.7;
-    margin: 0;
-  }
-</style>
-
-</BlogPost>
+    <style>
+      .about {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 4rem;
+      }
+      @media (min-width: 768px) {
+        .row { grid-template-columns: 1fr 1fr; }
+        .row-reverse { direction: rtl; }
+        .row-reverse > * { direction: ltr; }
+      }
+      .photo {
+        width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0,0,0,.08);
+        display: block;
+      }
+      .copy h1 { margin: 0 0 1rem; font-size: 2rem; font-weight: 700; }
+      .copy h2 { margin: 0 0 .5rem; font-size: 1.4rem; font-weight: 600; }
+      .copy p { color: #555; line-height: 1.7; margin: 0; }
+    </style>
+  </body>
+</html>
