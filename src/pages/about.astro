@@ -1,29 +1,27 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BlogPost from '../layouts/BlogPost.astro';
 ---
 
-<Layout title="About Us">
+<BlogPost
+  title="About Us"
+  description="Who we are and how we work"
+  heroImage="/blog-placeholder-about.jpg"
+>
   <section class="mx-auto max-w-6xl px-6 py-16 space-y-24">
-
     <!-- Row 1 -->
     <div class="grid md:grid-cols-2 gap-8 items-center">
-      <img
-        src="/JHY.png"
-        alt="Introducing Joseph Yim"
-        class="rounded-2xl shadow-lg w-full"
-      />
+      <img src="/JHY.png" alt="Introducing Joseph Yim" class="rounded-2xl shadow-lg w-full" />
       <div class="text-left">
         <h2 class="text-2xl font-semibold mb-4">Bio</h2>
         <p class="text-gray-700 leading-relaxed">
           testing testing . blah blah Every story deserves to be told clearly and authentically.
-          We help students refine their ideas into personal narratives that stand out to
-          admissions committees.
+          We help students refine their ideas into personal narratives that stand out to admissions committees.
         </p>
       </div>
     </div>
 
     <!-- Row 2 -->
-    <div class="grid md:grid-cols-2 gap-8 items-center md:[&>*]:order-none md:[&>img]:order-2">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
       <div class="text-left">
         <h2 class="text-2xl font-semibold mb-4">testing 1</h2>
         <p class="text-gray-700 leading-relaxed">
@@ -31,12 +29,7 @@ import Layout from '../layouts/Layout.astro';
           uncover their strongest themes and deliver essays that capture who they are.
         </p>
       </div>
-      <img
-        src="/KYM.png"
-        alt="Introducing Kristine Ma"
-        class="rounded-2xl shadow-lg w-full"
-      />
+      <img src="/KYM.png" alt="Introducing Kristine Ma" class="rounded-2xl shadow-lg w-full" />
     </div>
-
   </section>
-</Layout>
+</BlogPost>
