@@ -10,25 +10,11 @@ import Header from '../components/Header.astro';
   <body>
     <Header />
 
-<style>
-  .page-hero {
-    text-align: center;
-    padding: 5rem 1.5rem 3rem;
-    background: #fafafa;
-    border-bottom: 1px solid #eee;
-  }
-  .page-hero h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 0 0 .75rem;
-  }
-  .page-hero p {
-    color: #555;
-    font-size: 1.1rem;
-    margin: 0;
-  }
-</style>
-
+    <!-- ✅ Single About Us header -->
+    <header class="page-hero">
+      <h1>About Us</h1>
+      <p>Personalized essay consulting led by Kristine & Joseph.</p>
+    </header>
 
     <main>
       <section class="about">
@@ -36,10 +22,9 @@ import Header from '../components/Header.astro';
         <div class="row">
           <img src="/JHY .png" alt="Introducing Joseph Yim" class="photo" />
           <div class="copy">
-            <h1>About Us</h1>
             <h2>Bio</h2>
             <p>
-              testing testing . blah blah Every story deserves to be told clearly and authentically.
+              Every story deserves to be told clearly and authentically.
               We help students refine their ideas into personal narratives that stand out to admissions committees.
             </p>
           </div>
@@ -48,10 +33,10 @@ import Header from '../components/Header.astro';
         <!-- Row 2 (flipped on desktop) -->
         <div class="row row-reverse">
           <div class="copy">
-            <h2>testing 1</h2>
+            <h2>Kristine Ma</h2>
             <p>
-              From brainstorming to final polish, our editors work closely with each student to
-              uncover their strongest themes and deliver essays that capture who they are.
+              From brainstorming to final polish, our editors work closely with each student
+              to uncover their strongest themes and deliver essays that capture who they are.
             </p>
           </div>
           <img src="/KYM.png" alt="Introducing Kristine Ma" class="photo" />
@@ -60,6 +45,25 @@ import Header from '../components/Header.astro';
     </main>
 
     <style>
+      /* Hero header */
+      .page-hero {
+        text-align: center;
+        padding: 5rem 1.5rem 3rem;
+        background: #fafafa;
+        border-bottom: 1px solid #eee;
+      }
+      .page-hero h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0 0 .75rem;
+      }
+      .page-hero p {
+        color: #555;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+
+      /* About section */
       .about {
         max-width: 1100px;
         margin: 0 auto;
@@ -83,9 +87,16 @@ import Header from '../components/Header.astro';
         box-shadow: 0 8px 30px rgba(0,0,0,.08);
         display: block;
       }
-      .copy h1 { margin: 0 0 1rem; font-size: 2rem; font-weight: 700; }
-      .copy h2 { margin: 0 0 .5rem; font-size: 1.4rem; font-weight: 600; }
-      .copy p { color: #555; line-height: 1.7; margin: 0; }
+      .copy h2 {
+        margin: 0 0 .5rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+      .copy p {
+        color: #555;
+        line-height: 1.7;
+        margin: 0;
+      }
     </style>
   </body>
 </html>
