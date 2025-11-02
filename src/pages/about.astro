@@ -42,59 +42,69 @@ import Header from '../components/Header.astro';
       </section>
     </main>
 
-     <style>
-      /* Hero header */
-      .page-hero {
-        text-align: center;
-        padding: 5rem 1.5rem 3rem;
-        background: #fafafa;
-        border-bottom: 1px solid #eee;
-      }
-      .page-hero h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin: 0 0 .75rem;
-      }
-      .page-hero p {
-        color: #555;
-        font-size: 1.1rem;
-        margin: 0;
-      }
+     /* Hero */
+.page-hero {
+  text-align: center;
+  padding: 5rem 1.5rem 3rem;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+.page-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 .75rem;
+}
+.page-hero p { color:#555;font-size:1.1rem;margin:0; }
 
-      /* About section */
-      .about {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 4rem 1.5rem;
-      }
-      .row {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        align-items: center;
-        margin-bottom: 4rem;
-      }
-      @media (min-width: 768px) {
-        .row { grid-template-columns: 1fr 1fr; }
-        .row-reverse { direction: rtl; }
-        .row-reverse > * { direction: ltr; }
-      }
-      .photo {
-        width: 100%;
-        border-radius: 16px;
-        box-shadow: 0 8px 30px rgba(0,0,0,.08);
-        display: block;
-      }
-      .copy h2 {
-        margin: 0 0 .5rem;
-        font-size: 1.4rem;
-        font-weight: 600;
-      }
-      .copy p {
-        color: #555;
-        line-height: 1.7;
-        margin: 0;
-      }
-    </style>
+/* About section */
+.about {
+  max-width: 1800px;         /* 💥 wider overall container */
+  margin: 0 auto;
+  padding: 4rem 3rem;        /* 💥 less side padding, more screen space */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+/* Desktop layout: give text more room */
+@media (min-width: 900px) {
+  .row {
+    grid-template-columns: 68% 32%;   /* text ~70%, photo ~30% */
+  }
+  .row-reverse {
+    grid-template-columns: 32% 68%;
+    direction: rtl;
+  }
+  .row-reverse > * { direction: ltr; }
+}
+
+.photo {
+  width: 100%;
+  max-width: 360px;          /* narrower image */
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+  display: block;
+  margin: 0 auto;
+}
+.copy {
+  max-width: 950px;          /* 💥 wider text block */
+}
+.copy h2 {
+  margin: 0 0 .5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.copy p {
+  color: #444;
+  line-height: 1.85;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
   </body>
 </html>
