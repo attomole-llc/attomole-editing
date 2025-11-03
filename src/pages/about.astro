@@ -10,6 +10,7 @@ import Header from '../components/Header.astro';
   <body>
     <Header />
 
+    <!-- Single About Us header -->
     <header class="page-hero">
       <h1>About Us</h1>
       <p>Personalized essay consulting led by Kristine &amp; Joseph.</p>
@@ -42,7 +43,7 @@ import Header from '../components/Header.astro';
     </main>
 
     <style>
-      /* Hero */
+      /* ---------- HERO ---------- */
       .page-hero {
         text-align: center;
         padding: 5rem 1.5rem 3rem;
@@ -52,7 +53,7 @@ import Header from '../components/Header.astro';
       .page-hero h1 {
         font-size: 2.8rem;
         font-weight: 700;
-        margin: 0 0 .75rem;
+        margin: 0 0 0.75rem;
       }
       .page-hero p {
         color: #555;
@@ -60,28 +61,28 @@ import Header from '../components/Header.astro';
         margin: 0;
       }
 
-      /* About section */
+      /* ---------- ABOUT SECTION ---------- */
       .about {
         max-width: 1900px;
         margin: 0 auto;
-        padding: 4rem 4rem;
+        padding: 4rem 3rem;
       }
 
       .row {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
         align-items: center;
-        margin-bottom: 6rem;
+        margin-bottom: 5rem;
       }
 
-      /* Desktop layout */
+      /* 70/30 split on desktop */
       @media (min-width: 900px) {
         .row {
-          grid-template-columns: 72% 28%; /* text wider */
+          grid-template-columns: 70% 30%; /* text | image */
         }
         .row-reverse {
-          grid-template-columns: 28% 72%;
+          grid-template-columns: 30% 70%;
           direction: rtl;
         }
         .row-reverse > * {
@@ -89,17 +90,19 @@ import Header from '../components/Header.astro';
         }
       }
 
+      /* ---------- IMAGE ---------- */
       .photo {
         width: 100%;
-        max-width: 340px;
+        max-width: 320px;
         border-radius: 16px;
-        box-shadow: 0 8px 30px rgba(0,0,0,.08);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
         display: block;
         margin: 0 auto;
       }
 
+      /* ---------- TEXT ---------- */
       .copy {
-        max-width: 1100px; /* wider text container */
+        max-width: 1200px; /* gives text room but keeps readability */
       }
       .copy h2 {
         margin: 0 0 1rem;
@@ -107,10 +110,10 @@ import Header from '../components/Header.astro';
         font-weight: 700;
       }
       .copy p {
-        color: #333;
+        color: #222;
         line-height: 1.9;
-        font-size: 1.15rem; /* 💥 larger font size */
-        letter-spacing: 0.02rem;
+        font-size: 1.18rem;
+        letter-spacing: 0.01rem;
         margin: 0;
       }
     </style>
