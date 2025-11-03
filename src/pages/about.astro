@@ -42,80 +42,69 @@ import Header from '../components/Header.astro';
       </section>
     </main>
 
-    <style>
-      /* ---------- HERO ---------- */
-      .page-hero {
-        text-align: center;
-        padding: 5rem 1.5rem 3rem;
-        background: #fafafa;
-        border-bottom: 1px solid #eee;
-      }
-      .page-hero h1 {
-        font-size: 2.8rem;
-        font-weight: 700;
-        margin: 0 0 0.75rem;
-      }
-      .page-hero p {
-        color: #555;
-        font-size: 1.2rem;
-        margin: 0;
-      }
+/* ---------- HERO ---------- */
+.page-hero {
+  text-align: center;
+  padding: 5rem 1.5rem 3rem;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+.page-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+.page-hero p {
+  color: #555;
+  font-size: 1.2rem;
+  margin: 0;
+}
 
-      /* ---------- ABOUT SECTION ---------- */
-      .about {
-        max-width: 1900px;
-        margin: 0 auto;
-        padding: 4rem 3rem;
-      }
+/* ---------- ABOUT SECTION ---------- */
+.about {
+  max-width: 2100px;      /* 💥 much wider total area */
+  margin: 0 auto;
+  padding: 4rem 2rem;     /* smaller side padding = less empty space */
+}
 
-      .row {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        align-items: center;
-        margin-bottom: 5rem;
-      }
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
 
-      /* 70/30 split on desktop */
-      @media (min-width: 900px) {
-        .row {
-          grid-template-columns: 70% 30%; /* text | image */
-        }
-        .row-reverse {
-          grid-template-columns: 30% 70%;
-          direction: rtl;
-        }
-        .row-reverse > * {
-          direction: ltr;
-        }
-      }
+/* ----------  TEXT/IMAGE SPLIT  ---------- */
+@media (min-width: 900px) {
+  .row {
+    grid-template-columns: 80% 20%;   /* 💥 text 80%, photo 20% */
+    column-gap: 1.5rem;               /* tighter gap */
+  }
+  .row-reverse {
+    grid-template-columns: 20% 80%;
+    direction: rtl;
+    column-gap: 1.5rem;
+  }
+  .row-reverse > * {
+    direction: ltr;
+  }
+}
 
-      /* ---------- IMAGE ---------- */
-      .photo {
-        width: 100%;
-        max-width: 320px;
-        border-radius: 16px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-        display: block;
-        margin: 0 auto;
-      }
+/* ---------- IMAGE ---------- */
+.photo {
+  width: 100%;
+  max-width: 260px;        /* smaller photo */
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+  display: block;
+  margin: 0 auto;
+}
 
-      /* ---------- TEXT ---------- */
-      .copy {
-        max-width: 1200px; /* gives text room but keeps readability */
-      }
-      .copy h2 {
-        margin: 0 0 1rem;
-        font-size: 2rem;
-        font-weight: 700;
-      }
-      .copy p {
-        color: #222;
-        line-height: 1.9;
-        font-size: 1.18rem;
-        letter-spacing: 0.01rem;
-        margin: 0;
-      }
-    </style>
+/* ---------- TEXT ---------- */
+.copy {
+  max-width: none
+
+
   </body>
 </html>
