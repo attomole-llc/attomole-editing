@@ -12,7 +12,7 @@ import Header from '../components/Header.astro';
 
     <header class="page-hero">
       <h1>About Us</h1>
-      <p>Personalized essay consulting led by Joseph &amp; Kristine.</p>
+      <p>Personalized consulting led by Kristine &amp; Joseph.</p>
     </header>
 
     <main>
@@ -60,7 +60,7 @@ import Header from '../components/Header.astro';
     </main>
 
     <style>
-      /* ---------- HERO ---------- */
+      /* HERO */
       .page-hero {
         text-align: center;
         padding: 5rem 1.5rem 3rem;
@@ -70,9 +70,10 @@ import Header from '../components/Header.astro';
       .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin: 0 0 .75rem; }
       .page-hero p  { color:#555; font-size:1.1rem; margin:0; }
 
-      /* ---------- ABOUT SECTION ---------- */
+      /* ABOUT WRAPPER */
       .about { max-width: 1400px; margin: 0 auto; padding: 4rem 1.5rem; }
 
+      /* MOBILE: stack */
       .row {
         display: grid;
         grid-template-columns: 1fr;
@@ -81,30 +82,24 @@ import Header from '../components/Header.astro';
         margin-bottom: 4rem;
       }
 
-      /* Desktop: fixed 35% | 65% columns and explicit placement */
+      /* DESKTOP: fixed image column so both portraits match exactly */
       @media (min-width: 900px) {
-        .row { grid-template-columns: 35% 65%; column-gap: 2rem; }
-
-        .row-left .photo { grid-column: 1; }
-        .row-left .copy  { grid-column: 2; }
-
-        .row-right .photo { grid-column: 2; }
-        .row-right .copy  { grid-column: 1; }
+        .row-left  { grid-template-columns: 360px 1fr; column-gap: 2.25rem; }
+        .row-right { grid-template-columns: 1fr 360px; column-gap: 2.25rem; }
       }
 
-      /* ---------- PHOTO: same size/shape for both ---------- */
+      /* PHOTO: fixed size, identical for both */
       .photo {
-        width: 100%;
-        max-width: 900px;    /* same width cap */
-        aspect-ratio: 3 / 4; /* same proportions */
-        object-fit: cover;   /* crop consistently */
+        width: 360px;          /* lock width */
+        height: 480px;         /* lock height (3:4) */
+        object-fit: cover;     /* crop consistently */
         border-radius: 16px;
         box-shadow: 0 8px 30px rgba(0,0,0,.08);
         display: block;
         margin: 0 auto;
       }
 
-      /* ---------- TEXT ---------- */
+      /* TEXT */
       .copy h2 { margin: 0 0 .75rem; font-size: 1.8rem; font-weight: 600; }
       .copy p  { color:#444; line-height: 1.8; font-size: 1.05rem; margin: 0; }
     </style>
