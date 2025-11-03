@@ -10,10 +10,9 @@ import Header from '../components/Header.astro';
   <body>
     <Header />
 
-    <!-- Single About Us header -->
     <header class="page-hero">
       <h1>About Us</h1>
-      <p>Personalized essay consulting led by Kristine &amp; Joseph.</p>
+      <p>Personalized essay consulting led by Kristine & Joseph.</p>
     </header>
 
     <main>
@@ -24,7 +23,14 @@ import Header from '../components/Header.astro';
           <div class="copy">
             <h2>Joseph Yim</h2>
             <p>
-              For nearly fifteen years, Joseph Yim has taught writing in hagwons, English camps, and private settings—helping students turn ideas into essays that are genuine, structured, and impactful. Drawing on his background in sociology from UC Berkeley and law from Harvard Law School, he teaches students to think critically about audience, diction, tone, and structure—approaching writing as both art and system. Having guided more than seventy students through college and graduate applications, Joseph encourages honest thinking over fancy words and helps writers express complex ideas simply, beautifully, and with purpose.
+              For nearly fifteen years, Joseph Yim has taught writing in hagwons, English camps,
+              and private settings—helping students turn ideas into essays that are genuine,
+              structured, and impactful. Drawing on his background in sociology from UC Berkeley
+              and law from Harvard Law School, he teaches students to think critically about
+              audience, diction, tone, and structure—approaching writing as both art and system.
+              Having guided more than seventy students through college and graduate applications,
+              Joseph encourages honest thinking over fancy words and helps writers express complex
+              ideas simply, beautifully, and with purpose.
             </p>
           </div>
         </div>
@@ -34,7 +40,18 @@ import Header from '../components/Header.astro';
           <div class="copy">
             <h2>Kristine Ma</h2>
             <p>
-              Kristine has over a decade of experience teaching and mentoring students in STEM, test preparation, and college applications. She holds a bachelor’s degree in Chemistry from the University of Chicago, a master’s in Biomedical Engineering from Brown University, and a Ph.D. in Bioengineering from Northeastern University. A former certified high school teacher, Kristine has taught Chemistry, General Science, and SAT/ACT subjects, and coached award-winning Science Olympiad and engineering teams—including a state champion team that advanced to the national TEAMS competition. She has also taught at The Princeton Review (Seoul, Korea) and mentored university students in research and thesis development as a Post-Doctoral Research Scholar at Arizona State University’s School of Engineering. Known for her adaptive teaching style and thoughtful rigor, Kristine focuses on maximizing each student’s potential.
+              Kristine has over a decade of experience teaching and mentoring students in STEM,
+              test preparation, and college applications. She holds a bachelor’s degree in
+              Chemistry from the University of Chicago, a master’s in Biomedical Engineering
+              from Brown University, and a Ph.D. in Bioengineering from Northeastern University.
+              A former certified high school teacher, Kristine has taught Chemistry, General
+              Science, and SAT/ACT subjects, and coached award-winning Science Olympiad and
+              engineering teams—including a state champion team that advanced to the national
+              TEAMS competition. She has also taught at The Princeton Review (Seoul, Korea) and
+              mentored university students in research and thesis development as a Post-Doctoral
+              Research Scholar at Arizona State University’s School of Engineering. Known for her
+              adaptive teaching style and thoughtful rigor, Kristine focuses on maximizing each
+              student’s potential.
             </p>
           </div>
           <img src="/KYM.png" alt="Introducing Kristine Ma" class="photo" />
@@ -42,69 +59,82 @@ import Header from '../components/Header.astro';
       </section>
     </main>
 
-/* ---------- HERO ---------- */
-.page-hero {
-  text-align: center;
-  padding: 5rem 1.5rem 3rem;
-  background: #fafafa;
-  border-bottom: 1px solid #eee;
-}
-.page-hero h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin: 0 0 0.75rem;
-}
-.page-hero p {
-  color: #555;
-  font-size: 1.2rem;
-  margin: 0;
-}
+    <style>
+      /* Hero */
+      .page-hero {
+        text-align: center;
+        padding: 5rem 1.5rem 3rem;
+        background: #fafafa;
+        border-bottom: 1px solid #eee;
+      }
+      .page-hero h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin: 0 0 0.75rem;
+      }
+      .page-hero p {
+        color: #555;
+        font-size: 1.2rem;
+        margin: 0;
+      }
 
-/* ---------- ABOUT SECTION ---------- */
-.about {
-  max-width: 2100px;      /* 💥 much wider total area */
-  margin: 0 auto;
-  padding: 4rem 2rem;     /* smaller side padding = less empty space */
-}
+      /* About section */
+      .about {
+        max-width: 2100px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
 
-.row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: center;
-  margin-bottom: 5rem;
-}
+      .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 5rem;
+      }
 
-/* ----------  TEXT/IMAGE SPLIT  ---------- */
-@media (min-width: 900px) {
-  .row {
-    grid-template-columns: 80% 20%;   /* 💥 text 80%, photo 20% */
-    column-gap: 1.5rem;               /* tighter gap */
-  }
-  .row-reverse {
-    grid-template-columns: 20% 80%;
-    direction: rtl;
-    column-gap: 1.5rem;
-  }
-  .row-reverse > * {
-    direction: ltr;
-  }
-}
+      /* Desktop split: text wide, image narrow */
+      @media (min-width: 900px) {
+        .row {
+          grid-template-columns: 80% 20%;
+          column-gap: 1.5rem;
+        }
+        .row-reverse {
+          grid-template-columns: 20% 80%;
+          column-gap: 1.5rem;
+          direction: rtl;
+        }
+        .row-reverse > * {
+          direction: ltr;
+        }
+      }
 
-/* ---------- IMAGE ---------- */
-.photo {
-  width: 100%;
-  max-width: 260px;        /* smaller photo */
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.08);
-  display: block;
-  margin: 0 auto;
-}
+      /* Image */
+      .photo {
+        width: 100%;
+        max-width: 260px;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        display: block;
+        margin: 0 auto;
+      }
 
-/* ---------- TEXT ---------- */
-.copy {
-  max-width: none
-
-
+      /* Text */
+      .copy {
+        max-width: none; /* let text use full column width */
+      }
+      .copy h2 {
+        margin: 0 0 1rem;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .copy p {
+        color: #222;
+        line-height: 2.0;
+        font-size: 1.22rem;
+        letter-spacing: 0.01rem;
+        margin: 0;
+      }
+    </style>
   </body>
 </html>
