@@ -12,13 +12,13 @@ import Header from '../components/Header.astro';
 
     <header class="page-hero">
       <h1>About Us</h1>
-      <p>Personalized consulting led by Joseph &amp; Kristine.</p>
+      <p>Personalized essay consulting led by Kristine &amp; Joseph.</p>
     </header>
 
     <main>
       <section class="about">
-        <!-- Row 1 -->
-        <div class="row">
+        <!-- Row 1 (image left) -->
+        <div class="row row-left">
           <img src="/JHY.png" alt="Introducing Joseph Yim" class="photo" />
           <div class="copy">
             <h2>Joseph Yim</h2>
@@ -35,8 +35,8 @@ import Header from '../components/Header.astro';
           </div>
         </div>
 
-        <!-- Row 2 -->
-        <div class="row row-reverse">
+        <!-- Row 2 (image right) -->
+        <div class="row row-right">
           <div class="copy">
             <h2>Kristine Ma</h2>
             <p>
@@ -44,7 +44,8 @@ import Header from '../components/Header.astro';
               test preparation, and college applications. She holds a bachelor’s degree in
               Chemistry from the University of Chicago, a master’s in Biomedical Engineering
               from Brown University, and a Ph.D. in Bioengineering from Northeastern University.
-              A former certified high school teacher, Kristine has taught various STEM subjects, SAT/ACT subjects, and coached award-winning Science Olympiad and
+              A former certified high school teacher, Kristine has taught Chemistry, General
+              Science, and SAT/ACT subjects, and coached award-winning Science Olympiad and
               engineering teams—including a state champion team that advanced to the national
               TEAMS competition. She has also taught at The Princeton Review (Seoul, Korea) and
               mentored university students in research and thesis development as a Post-Doctoral
@@ -66,72 +67,46 @@ import Header from '../components/Header.astro';
         background: #fafafa;
         border-bottom: 1px solid #eee;
       }
-      .page-hero h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin: 0 0 .75rem;
-      }
-      .page-hero p {
-        color: #555;
-        font-size: 1.1rem;
-        margin: 0;
-      }
+      .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin: 0 0 .75rem; }
+      .page-hero p  { color:#555; font-size:1.1rem; margin:0; }
 
       /* ---------- ABOUT SECTION ---------- */
-      .about {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 4rem 1.5rem;
-      }
+      .about { max-width: 1400px; margin: 0 auto; padding: 4rem 1.5rem; }
 
       .row {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
         align-items: start;
         margin-bottom: 4rem;
       }
 
+      /* Desktop: fixed 35% | 65% columns and explicit placement */
       @media (min-width: 900px) {
-        .row {
-          grid-template-columns: 65% 35%;
-          align-items: start; /* top-align both image & text */
-          column-gap: 2rem;
-        }
-        .row-reverse {
-          grid-template-columns: 35% 65%;
-          align-items: start;
-          direction: rtl;
-        }
-        .row-reverse > * {
-          direction: ltr;
-        }
+        .row { grid-template-columns: 35% 65%; column-gap: 2rem; }
+
+        .row-left .photo { grid-column: 1; }
+        .row-left .copy  { grid-column: 2; }
+
+        .row-right .photo { grid-column: 2; }
+        .row-right .copy  { grid-column: 1; }
       }
 
-      /* ---------- PHOTO ---------- */
+      /* ---------- PHOTO: same size/shape for both ---------- */
       .photo {
         width: 100%;
-        max-width: 380px;
-        aspect-ratio: 3 / 4;   /* consistent proportions for both */
-        object-fit: cover;     /* crop to fit frame neatly */
+        max-width: 380px;    /* same width cap */
+        aspect-ratio: 3 / 4; /* same proportions */
+        object-fit: cover;   /* crop consistently */
         border-radius: 16px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 8px 30px rgba(0,0,0,.08);
         display: block;
         margin: 0 auto;
       }
 
       /* ---------- TEXT ---------- */
-      .copy h2 {
-        margin: 0 0 .75rem;
-        font-size: 1.8rem;
-        font-weight: 600;
-      }
-      .copy p {
-        color: #444;
-        line-height: 1.8;
-        font-size: 1.05rem;
-        margin: 0;
-      }
+      .copy h2 { margin: 0 0 .75rem; font-size: 1.8rem; font-weight: 600; }
+      .copy p  { color:#444; line-height: 1.8; font-size: 1.05rem; margin: 0; }
     </style>
   </body>
 </html>
