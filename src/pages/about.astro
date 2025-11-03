@@ -23,7 +23,14 @@ import Header from '../components/Header.astro';
           <div class="copy">
             <h2>Joseph Yim</h2>
             <p>
-              For nearly fifteen years, Joseph Yim has taught writing in hagwons, English camps, and private settings—helping students turn ideas into essays that are genuine, structured, and impactful. Drawing on his background in sociology from UC Berkeley and law from Harvard Law School, he teaches students to think critically about audience, diction, tone, and structure—approaching writing as both art and system. Having guided more than seventy students through college and graduate applications, Joseph encourages honest thinking over fancy words and helps writers express complex ideas simply, beautifully, and with purpose.
+              For nearly fifteen years, Joseph Yim has taught writing in hagwons, English camps,
+              and private settings—helping students turn ideas into essays that are genuine,
+              structured, and impactful. Drawing on his background in sociology from UC Berkeley
+              and law from Harvard Law School, he teaches students to think critically about
+              audience, diction, tone, and structure—approaching writing as both art and system.
+              Having guided more than seventy students through college and graduate applications,
+              Joseph encourages honest thinking over fancy words and helps writers express complex
+              ideas simply, beautifully, and with purpose.
             </p>
           </div>
         </div>
@@ -33,7 +40,18 @@ import Header from '../components/Header.astro';
           <div class="copy">
             <h2>Kristine Ma</h2>
             <p>
-              Kristine has over a decade of experience teaching and mentoring students in STEM, test preparation, and college applications. She holds a bachelor’s degree in Chemistry from the University of Chicago, a master’s in Biomedical Engineering from Brown University, and a Ph.D. in Bioengineering from Northeastern University. A former certified high school teacher, Kristine has taught Chemistry, General Science, and SAT/ACT subjects, and coached award-winning Science Olympiad and engineering teams—including a state champion team that advanced to the national TEAMS competition. She has also taught at The Princeton Review (Seoul, Korea) and mentored university students in research and thesis development as a Post-Doctoral Research Scholar at Arizona State University’s School of Engineering. Known for her adaptive teaching style and thoughtful rigor, Kristine focuses on maximizing each student’s potential.
+              Kristine has over a decade of experience teaching and mentoring students in STEM,
+              test preparation, and college applications. She holds a bachelor’s degree in
+              Chemistry from the University of Chicago, a master’s in Biomedical Engineering
+              from Brown University, and a Ph.D. in Bioengineering from Northeastern University.
+              A former certified high school teacher, Kristine has taught Chemistry, General
+              Science, and SAT/ACT subjects, and coached award-winning Science Olympiad and
+              engineering teams—including a state champion team that advanced to the national
+              TEAMS competition. She has also taught at The Princeton Review (Seoul, Korea) and
+              mentored university students in research and thesis development as a Post-Doctoral
+              Research Scholar at Arizona State University’s School of Engineering. Known for her
+              adaptive teaching style and thoughtful rigor, Kristine focuses on maximizing each
+              student’s potential.
             </p>
           </div>
           <img src="/KYM.png" alt="Introducing Kristine Ma" class="photo" />
@@ -42,7 +60,7 @@ import Header from '../components/Header.astro';
     </main>
 
     <style>
-      /* Hero */
+      /* ---------- HERO ---------- */
       .page-hero {
         text-align: center;
         padding: 5rem 1.5rem 3rem;
@@ -60,26 +78,30 @@ import Header from '../components/Header.astro';
         margin: 0;
       }
 
-      /* About section */
+      /* ---------- ABOUT SECTION ---------- */
       .about {
         max-width: 1400px;
         margin: 0 auto;
         padding: 4rem 1.5rem;
       }
+
       .row {
         display: grid;
         grid-template-columns: 1fr;
         gap: 3rem;
-        align-items: center;
+        align-items: start;
         margin-bottom: 4rem;
       }
 
       @media (min-width: 900px) {
         .row {
           grid-template-columns: 65% 35%;
+          align-items: start; /* top-align both image & text */
+          column-gap: 2rem;
         }
         .row-reverse {
           grid-template-columns: 35% 65%;
+          align-items: start;
           direction: rtl;
         }
         .row-reverse > * {
@@ -87,17 +109,22 @@ import Header from '../components/Header.astro';
         }
       }
 
+      /* ---------- PHOTO ---------- */
       .photo {
         width: 100%;
-        max-width: 400px;
+        max-width: 380px;
+        aspect-ratio: 3 / 4;   /* consistent proportions for both */
+        object-fit: cover;     /* crop to fit frame neatly */
         border-radius: 16px;
-        box-shadow: 0 8px 30px rgba(0,0,0,.08);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
         display: block;
         margin: 0 auto;
       }
+
+      /* ---------- TEXT ---------- */
       .copy h2 {
-        margin: 0 0 .5rem;
-        font-size: 1.6rem;
+        margin: 0 0 .75rem;
+        font-size: 1.8rem;
         font-weight: 600;
       }
       .copy p {
