@@ -10,17 +10,16 @@ import Header from '../components/Header.astro';
   <body>
     <Header />
 
-    <!-- ✅ Single About Us header -->
     <header class="page-hero">
       <h1>About Us</h1>
-      <p>Personalized essay consulting led by Kristine & Joseph.</p>
+      <p>Personalized essay consulting led by Kristine &amp; Joseph.</p>
     </header>
 
     <main>
       <section class="about">
         <!-- Row 1 -->
         <div class="row">
-          <img src="/JHY .png" alt="Introducing Joseph Yim" class="photo" />
+          <img src="/JHY.png" alt="Introducing Joseph Yim" class="photo" />
           <div class="copy">
             <h2>Joseph Yim</h2>
             <p>
@@ -29,12 +28,12 @@ import Header from '../components/Header.astro';
           </div>
         </div>
 
-        <!-- Row 2 (flipped on desktop) -->
+        <!-- Row 2 -->
         <div class="row row-reverse">
           <div class="copy">
             <h2>Kristine Ma</h2>
             <p>
-              Kristine has over a decade of experience teaching and mentoring students in STEM, test preparation and college application. She holds a bachelor’s degree in Chemistry from the University of Chicago, a master’s in Biomedical Engineering from Brown University, and a Ph.D. in Bioengineering from Northeastern University. A former certified high school teacher, Kristine has taught Chemistry, General Science, and SAT/ACT subjects, and coached award-winning Science Olympiad and engineering teams—including a state champion team that advanced to the national TEAMS competition. She has also taught at The Princeton Review (Seoul,Korea) and mentored university students in research and thesis development as a Post-Doctoral Research Scholar at Arizona State University’s School of Engineering. Known for her adaptive teaching style and thoughtful rigor, Kristine focuses on maximizing each student’s potential.
+              Kristine has over a decade of experience teaching and mentoring students in STEM, test preparation, and college applications. She holds a bachelor’s degree in Chemistry from the University of Chicago, a master’s in Biomedical Engineering from Brown University, and a Ph.D. in Bioengineering from Northeastern University. A former certified high school teacher, Kristine has taught Chemistry, General Science, and SAT/ACT subjects, and coached award-winning Science Olympiad and engineering teams—including a state champion team that advanced to the national TEAMS competition. She has also taught at The Princeton Review (Seoul, Korea) and mentored university students in research and thesis development as a Post-Doctoral Research Scholar at Arizona State University’s School of Engineering. Known for her adaptive teaching style and thoughtful rigor, Kristine focuses on maximizing each student’s potential.
             </p>
           </div>
           <img src="/KYM.png" alt="Introducing Kristine Ma" class="photo" />
@@ -42,70 +41,78 @@ import Header from '../components/Header.astro';
       </section>
     </main>
 
-<style>
-     /* Hero */
-.page-hero {
-  text-align: center;
-  padding: 5rem 1.5rem 3rem;
-  background: #fafafa;
-  border-bottom: 1px solid #eee;
-}
-.page-hero h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0 0 .75rem;
-}
-.page-hero p { color:#555;font-size:1.1rem;margin:0; }
+    <style>
+      /* Hero */
+      .page-hero {
+        text-align: center;
+        padding: 5rem 1.5rem 3rem;
+        background: #fafafa;
+        border-bottom: 1px solid #eee;
+      }
+      .page-hero h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin: 0 0 .75rem;
+      }
+      .page-hero p {
+        color: #555;
+        font-size: 1.2rem;
+        margin: 0;
+      }
 
-/* About section */
-.about {
-  max-width: 1800px;         /* 💥 wider overall container */
-  margin: 0 auto;
-  padding: 4rem 3rem;        /* 💥 less side padding, more screen space */
-}
+      /* About section */
+      .about {
+        max-width: 1900px;
+        margin: 0 auto;
+        padding: 4rem 4rem;
+      }
 
-.row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  align-items: center;
-  margin-bottom: 5rem;
-}
+      .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: center;
+        margin-bottom: 6rem;
+      }
 
-/* Desktop layout: give text more room */
-@media (min-width: 900px) {
-  .row {
-    grid-template-columns: 68% 32%;   /* text ~70%, photo ~30% */
-  }
-  .row-reverse {
-    grid-template-columns: 32% 68%;
-    direction: rtl;
-  }
-  .row-reverse > * { direction: ltr; }
-}
+      /* Desktop layout */
+      @media (min-width: 900px) {
+        .row {
+          grid-template-columns: 72% 28%; /* text wider */
+        }
+        .row-reverse {
+          grid-template-columns: 28% 72%;
+          direction: rtl;
+        }
+        .row-reverse > * {
+          direction: ltr;
+        }
+      }
 
-.photo {
-  width: 100%;
-  max-width: 360px;          /* narrower image */
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.08);
-  display: block;
-  margin: 0 auto;
-}
-.copy {
-  max-width: 950px;          /* 💥 wider text block */
-}
-.copy h2 {
-  margin: 0 0 .5rem;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-.copy p {
-  color: #444;
-  line-height: 1.85;
-  font-size: 1.05rem;
-  margin: 0;
-}
-</style>
+      .photo {
+        width: 100%;
+        max-width: 340px;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0,0,0,.08);
+        display: block;
+        margin: 0 auto;
+      }
+
+      .copy {
+        max-width: 1100px; /* wider text container */
+      }
+      .copy h2 {
+        margin: 0 0 1rem;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .copy p {
+        color: #333;
+        line-height: 1.9;
+        font-size: 1.15rem; /* 💥 larger font size */
+        letter-spacing: 0.02rem;
+        margin: 0;
+      }
+    </style>
   </body>
 </html>
