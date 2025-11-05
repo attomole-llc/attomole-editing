@@ -2,7 +2,7 @@
 title: "Personalized College Essay Review"
 description: "Offering tailored support to help you bring out your authentic voice!"
 pubDate: "Nov 5 2025"
-heroImage: "/blog-placeholder-1.jpg"
+heroImage: "/College Essay Consultation.png"
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
