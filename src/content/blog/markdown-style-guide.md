@@ -1,7 +1,7 @@
 ---
-title: "Markdown Style Guide"
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
-pubDate: "Jun 19 2024"
+title: "Personalized College Essay Review"
+description: "Offering tailored support to help you bring out your authentic voice!"
+pubDate: "Nov 5 2025"
 heroImage: "/blog-placeholder-1.jpg"
 ---
 
