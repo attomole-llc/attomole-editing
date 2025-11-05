@@ -5,10 +5,6 @@ pubDate: "last updated Nov 5 2025"
 heroImage: "/College Essay Consultation.png"
 ---
 
-# ✨ Personalized College Essay Review ✨
-
-> *Craft a story that stands out—with guidance designed for you.*
-
 ## 💡 About Our Service
 We’re a boutique consulting team offering tailored support to help you bring out your authentic voice. Whether you’re preparing your Common App essay or a supplemental response, we’ll help you refine your ideas, structure, and style.
 
