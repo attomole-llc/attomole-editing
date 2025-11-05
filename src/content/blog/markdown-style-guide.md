@@ -1,7 +1,7 @@
 ---
 title: "Personalized College Essay Review"
 description: "Offering tailored support to help you bring out your authentic voice!"
-pubDate: "last updated Nov 5 2025"
+pubDate: ""
 heroImage: "/College Essay Consultation.png"
 ---
 
